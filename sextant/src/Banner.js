@@ -5,9 +5,9 @@ class Banner extends Component {
     render() {
         return (
             <div className="Banner">
-                <h1 className=''>{this.props.bannerText}</h1>
+                <h1>{this.props.bannerText}</h1>
             </div>
         );
-    }  
+    }
 }
 export default Banner;

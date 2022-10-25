@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./css/App.css";
 import Banner from "./Banner";
 import Exhibit from "./Exhibit";
+import AddressDisplay from './AddressDisplay';
 
 class App extends Component {
   render() {
@@ -9,9 +10,12 @@ class App extends Component {
       <div className="App">
         <Banner bannerText="My sextant application" />
         <div className="submenu">
-          <Exhibit name="Exhibit container 1"></Exhibit>
-          <Exhibit name="Exhibit container 2"></Exhibit>
-          <Exhibit name="Exhibit container 3"></Exhibit>
+          <Exhibit name="Public IPv4 Address">
+            <AddressDisplay url="https://api.ipify.org?format=json" />
+          </Exhibit>
+          <Exhibit name="Public IPv6 Address">
+            <AddressDisplay url="https://api64.ipify.org?format=json" />
+          </Exhibit>
         </div>
       </div>
     );
